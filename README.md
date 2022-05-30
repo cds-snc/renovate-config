@@ -1,10 +1,16 @@
-# Generic Project Template
+# CDS Renovate default config
 
 This repository provides some base files for setting up a repository at
 CDS. Plan is to create more project template for specific technologies:
 
-- project-template-terraform
-- project-template-python
-- project-template-nodejs
+### How to use
 
-Note that default community health files are maintained at https://github.com/cds-snc/.github 
+Grant the `renovate-bot` access to your repository. This will result in the creation of an onboarding PR that contains a `renovate.json`. Update that renovate.json to what's contained in the following code block.
+
+```json
+{
+  "extends": [
+    "github>cds-snc/renovate-config"
+  ]
+}
+```
