@@ -53,14 +53,9 @@
       "dependencyDashboardApproval": true
     },
     {
-      "description": "One week stability period for minor and patch updates",
-      "matchUpdateTypes": ["minor", "patch"],
+      "description": "One week stability period for minor, patch, digest and lockFileMaintenance",
+      "matchUpdateTypes": ["minor", "patch", "digest", "lockFileMaintenance"],
       "stabilityDays": 7
-    },
-    {
-      "description": "Automerge digest and lock file maintenance",
-      "matchUpdateTypes": ["digest", "lockFileMaintenance"],
-      "automerge": true
     },
     {
       "description": "v prefix workaround for action updates",
