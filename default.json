@@ -17,7 +17,7 @@
   "dependencyDashboard": true,
   "prCreation": "not-pending",
   "rebaseWhen": "behind-base-branch",
-  "platformAutomerge": true,
+  "platformAutomerge": false,
   "internalChecksFilter": "strict",
   "packageRules": [
     {
