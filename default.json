@@ -19,6 +19,7 @@
   "rebaseWhen": "behind-base-branch",
   "platformAutomerge": false,
   "internalChecksFilter": "strict",
+  "labels": ["Dependencies"],
   "packageRules": [
     {
       "matchDatasources": ["docker"],
