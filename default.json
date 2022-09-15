@@ -19,6 +19,9 @@
   "rebaseWhen": "behind-base-branch",
   "platformAutomerge": false,
   "internalChecksFilter": "strict",
+  "prBodyNotes": [
+    "### Review \n- [ ] Updates have been tested and work \n- [ ] If updates are AWS related, versions match the infrastructure (e.g. Lambda runtime, database, etc.)"
+  ],
   "packageRules": [
     {
       "matchDatasources": ["docker"],
