@@ -13,7 +13,7 @@
     "helpers:pinGitHubActionDigests"
   ],
   "schedule": ["before 3am on Monday"],
-  "dependencyDashboard": true,
+  "automergeType": "pr",
   "prCreation": "not-pending",
   "platformAutomerge": false,
   "internalChecksFilter": "strict",
