@@ -14,12 +14,16 @@
   ],
   "schedule": ["before 3am on Monday"],
   "automergeType": "pr",
-  "dependencyDashboard": true,
   "prCreation": "not-pending",
-  "rebaseWhen": "behind-base-branch",
   "platformAutomerge": false,
   "internalChecksFilter": "strict",
   "labels": ["Dependencies"],
+  "prBodyNotes": [
+    "### Review \n- [ ] Updates have been tested and work \n- [ ] If updates are AWS related, versions match the infrastructure (e.g. Lambda runtime, database, etc.)"
+  ],
+  "ignoreDeps": [
+    "bridgecrewio/checkov-action"
+  ],
   "packageRules": [
     {
       "matchDatasources": ["docker"],
