@@ -17,6 +17,7 @@
   "prCreation": "not-pending",
   "platformAutomerge": false,
   "internalChecksFilter": "strict",
+  "labels": ["Dependencies"],
   "prBodyNotes": [
     "### Review \n- [ ] Updates have been tested and work \n- [ ] If updates are AWS related, versions match the infrastructure (e.g. Lambda runtime, database, etc.)"
   ],
