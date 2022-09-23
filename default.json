@@ -22,8 +22,12 @@
     "### Review \n- [ ] Updates have been tested and work \n- [ ] If updates are AWS related, versions match the infrastructure (e.g. Lambda runtime, database, etc.)"
   ],
   "ignoreDeps": [
-    "bridgecrewio/checkov-action"
+    "bridgecrewio/checkov-action",
+    "public.ecr.aws/lambda/python"
   ],
+  "pip_requirements": {
+    "fileMatch": ["(^|/)([\\w-]*)requirements([\\w-]*)\\.(txt|pip|in)$"]
+  },
   "packageRules": [
     {
       "matchDatasources": ["docker"],
