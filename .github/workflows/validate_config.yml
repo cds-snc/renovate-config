@@ -17,8 +17,9 @@ jobs:
       - name: Checkout
         uses: actions/checkout@2541b1294d2704b0964813337f33b291d3f8596b # tag=v3.0.2
 
-      - name: Install validator
-        run: npm install -g renovate@32.202.3
-
       - name: Validate config 
-        run: renovate-config-validator default.json
+        run: |
+          docker run \
+            --entrypoint=renovate-config-validator \
+            --volume "$(pwd):/tmp" \
+            renovate/renovate:slim /tmp/default.json
