@@ -1,0 +1,27 @@
+name: Validate Renovate config
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+env:
+  RENOVATE_CONFIG_FILE: default.json
+
+jobs:
+  preset:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@2541b1294d2704b0964813337f33b291d3f8596b # tag=v3.0.2
+
+      - name: Install validator
+        run: npm install -g renovate-config-validator
+
+      - name: Validate config 
+        run: npx -p renovate renovate-config-validator
