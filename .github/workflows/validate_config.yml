@@ -21,7 +21,7 @@ jobs:
         uses: actions/checkout@2541b1294d2704b0964813337f33b291d3f8596b # tag=v3.0.2
 
       - name: Install validator
-        run: npm install -g renovate-config-validator
+        run: npm install -g renovate@32.202.3
 
       - name: Validate config 
-        run: npx -p renovate renovate-config-validator
+        run: renovate renovate-config-validator
