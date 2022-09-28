@@ -12,7 +12,8 @@
     "group:linters",
     "helpers:pinGitHubActionDigests"
   ],
-  "schedule": ["before 3am on Monday"],
+  "schedule": ["every weekend"],
+  "timezone": "America/Montreal",
   "automergeType": "pr",
   "prCreation": "not-pending",
   "platformAutomerge": false,
