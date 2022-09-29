@@ -1,4 +1,8 @@
-# Renovate Configuration
+<h1 align="center">
+Renovate Configuration
+</h1>
+
+<br>
 
 #### While we already include a broad base configuration by default you can also add to, and extend your own repo's configuration to meet your project's needs. 
 
