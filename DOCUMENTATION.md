@@ -110,9 +110,9 @@ Language specific tips and tricks
 </h2>
 
 ### Python:
-- Renovate supports `pip`, `pipenv`, `setup.py`, and `setup.cfg` by default. You don't have to change anything if you are using any of thesze.
-- Renovate will then look up dependencies on `PyPi` and determine if upgrade are available
-- The default file Renovate looks for is `requirements.txt` if you're using different nameing conventions you can add this to your local config. You can add file names or use regex to filter:
+- Renovate supports `pip`, `pipenv`, `setup.py`, and `setup.cfg` by default. You don't have to change anything if you are using any of these.
+- Renovate will then look up dependencies on `PyPi` and determine if upgrades are available.
+- The default tracking file Renovate looks for is `requirements.txt` if you're using different naming conventions you can add this to your local config. You can add file names or use regex to filter:
 
 ```json
 {
@@ -125,7 +125,7 @@ Language specific tips and tricks
 
 ## Javascript and Node.js
 - Renovate looks for `package.json` and supports `npm`, `yarn`, and `pnpm`
-- Renovate can also manage your `Node.js` versioning
+- Renovate can also manage your `Node.js` versioning.
   - For this reason it's probably best to pin your version of `Node.js` in the `engines` field in your `package.json` file.
   - In the following example, this will pin your version to any and all updates included in the 16 release and PRs will be created accordingly. 
 ```json
