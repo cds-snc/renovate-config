@@ -23,12 +23,14 @@ Renovate Configuration
 # 
 
 ## Table of Contents:
-1. [Base Configuration](#base-configuration)
-2. [Anatomy of a PR](#anatomy-of-a-pr)
-3. [Language specific tips and tricks](#language-specific-tips-and-tricks)
-   1. [Python](#python)
-   2. [Javascript](#javascript-and-nodejs)
-4. [Gotchas](#common-gotchas)
+- [](#)
+  - [Table of Contents:](#table-of-contents)
+  - [Base Configuration](#base-configuration)
+    - [What's included?](#whats-included)
+  - [Anatomy of a PR](#anatomy-of-a-pr)
+    - [Python:](#python)
+    - [Javascript and Node.js](#javascript-and-nodejs)
+  - [Gotchas](#gotchas)
 
 #
 
@@ -65,7 +67,7 @@ Updates Docker images on major updates only as well as pins image digests instea
 
 <br>
 
-Automatically pins the Renovate Github Action to it's respective digest as well, ensuring we're always using the offical Renovate Bot action!
+Automatically pins the Renovate Github Action to it's respective digest as well, ensuring we're always using the expected verion of the action!
 
 <br>
 
