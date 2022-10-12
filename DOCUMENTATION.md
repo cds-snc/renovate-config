@@ -28,9 +28,7 @@
 
 #
 
-<h2 align="center">
-Base Configuration
-</h2>
+## Base Configuration
 
 <br>
 
@@ -39,11 +37,7 @@ The base configuration covers most popular languages (Python, JS/Node.js, Ruby, 
 
 <br>
 
-Each repo will also have their own Dependency Dashboard gently lurking in their Issues board on Github. This dashboard shows which updates are waiting to be addressed by developers in the workflow agreed upon by each team (Scrum, Kanban, Sprint etc). When develpers create branches and PRs from the Dependency Dashboard they can then see the most up to date information available to help them integrate the updates. 
-
-<br>
-
-This Dashboard is updated on a weekly basis so that teams don't feel overwhelmed by a constant and neverending list of dependency PRs!
+Each repo will also have their own Dependency Dashboard gently lurking in their Issues board on Github. This dashboard shows which updates are waiting to be addressed by developers in the workflow agreed upon by each team (Scrum, Kanban, Sprint etc). When developers create branches and PRs from the Dependency Dashboard they can then see the most up to date information available to help them integrate the updates. 
 
 <br>
 
@@ -55,7 +49,7 @@ Groups some like dependencies together, such as linters. You can also customize 
 
 <br>
 
-Automatically rebases stale PRs, which are defined as those lasting longer than 21 days. This should be enough time to address major or critical updates. If an update is deemed infeasable for the time being you can move it into a temporary `ignore` state. However we don't recommend this. This option should be for patches that can't be fixed until the upstream maintainers fix a critical bug or issue.
+Automatically rebases stale PRs, which are defined as those lasting longer than 21 days. This should be enough time to address major or critical updates. If an update is not possible to apply you can move it into a temporary `ignore` state by closing the PR. However we don't recommend this. This option should be for patches that can't be fixed until the upstream maintainers fix a critical bug or issue.
 
 <br>
 
@@ -71,7 +65,7 @@ Automatically pins the Renovate Github Action to it's respective digest as well,
 
 <br>
 
-PR creation is set to immediate meaning as soon as a branch with the updated dependencie is created so is the PR. It is recommended you do not override this value. You can set this to either create a PR upon successful repo status checks or passiing tests but this can be brittle and undermine the point of automatic dependency management. There is also a manual setting to require human approval, but this will create a bottleneck in your PR process. Note this means approval to create a PR, not like a code approval to merge an already existing one! Adding an additional step that may not be useful.
+PR creation is set to `not-pending` meaning as soon all status checks have passed a PR will be raised. It is recommended you do not override this value. You can set this to either create a PR immediately or after passing all tests but this can be brittle and undermine the point of automatic dependency management. There is also a manual setting to require human approval, but this will create a bottleneck in your PR process. Note this means approval to create a PR, not like a code approval to merge an already existing one! 
 
 <br>
 
@@ -79,9 +73,7 @@ Automatically filters for our preset of 7 days for Stability Days. This is the n
 
 [Back to top](#renovate-configuration)
 #
-<h2 align="center">
-Anatomy of a PR   
-</h2>
+## Anatomy of a PR   
    
 - ### Header will include stats on Stability Days or the number of days a release has been available as well as the percentage of other projects using that package that have successfully onboarded that release.
     ![header](images/header.png)
@@ -101,9 +93,7 @@ Anatomy of a PR
 [Back to top](#renovate-configuration)
 #
 
-<h2 align="center">
 Language specific tips and tricks   
-</h2>
 
 ### Python:
 - Renovate supports `pip`, `pipenv`, `setup.py`, and `setup.cfg` by default. You don't have to change anything if you are using any of thesze.
@@ -117,9 +107,11 @@ Language specific tips and tricks
     }
 }
 ```
+- We have also added an additional `pip_requirements` setting to the base configuration to pattern match any possible `requirements` files that may not match the standard naming convention.
+
 <br>
 
-## Javascript and Node.js
+### Javascript and Node.js
 - Renovate looks for `package.json` and supports `npm`, `yarn`, and `pnpm`
 - Renovate can also manage your `Node.js` versioning
   - For this reason it's probably best to pin your version of `Node.js` in the `engines` field in your `package.json` file.
