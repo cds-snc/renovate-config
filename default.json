@@ -16,6 +16,7 @@
   "timezone": "America/Montreal",
   "automergeType": "pr",
   "prCreation": "not-pending",
+  "rollbackPrs": true,
   "platformAutomerge": false,
   "internalChecksFilter": "strict",
   "labels": ["Dependencies"],
