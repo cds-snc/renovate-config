@@ -136,7 +136,11 @@ Language specific tips and tricks
 
 ## Gotchas
 - You cannot have different sets of configuration settings across different branches! Your settings will always be taken from the branch that is set as your default branch. You can apply Renovate to scan as many branches as you'd like, just keep in mind you can't have custom settings _per_ branch.
-- Any dependency rollbacks that are applied to your code will automatically have any open PRs on that dependency closed. *WE MAY HAVE AN AUTOMATED SETTING TO OPEN PROPOSED DOWNGRADES BUT FOR NOW WE DON'T - STAY TUNED*
+- Any dependency rollbacks that are applied to your code will automatically have any open PRs on that dependency closed. 
+- There are times when a dependency version in use by a project gets removed from the registry. For some registries, existing releases or even whole packages can be removed or "yanked" at any time, while for some registries only very new or unused releases can be removed. `rollbackPrs` is set to true, which will downgrade to the next-highest release if the current release is no longer found in the registry.
+
+
+
 
 [Back to top](#renovate-configuration)
 
