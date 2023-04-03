@@ -17,7 +17,7 @@
   ],
   "timezone": "America/Montreal",
   "automergeType": "pr",
-  "prCreation": "not-pending",
+  "prCreation": "immediate",
   "platformAutomerge": false,
   "internalChecksFilter": "strict",
   "labels": [
