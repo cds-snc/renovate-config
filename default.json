@@ -29,7 +29,8 @@
   ],
   "ignoreDeps": [
     "bridgecrewio/checkov-action",
-    "public.ecr.aws/lambda/python"
+    "public.ecr.aws/lambda/python",
+    "tibdex/github-app-token"
   ],
   "pip_requirements": {
     "fileMatch": [
