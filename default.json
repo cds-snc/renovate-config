@@ -37,6 +37,11 @@
       "(^|/)([\\w-]*)requirements([\\w-]*)\\.(txt|pip|in)$"
     ]
   },
+  "ignorePaths": [
+    ".github/workflows/s3-backup.yml",
+    ".github/workflows/ossf-scorecard.yml",
+    ".github/workflows/export_github_data.yml"
+  ],
   "packageRules": [
     {
       "matchDatasources": [
