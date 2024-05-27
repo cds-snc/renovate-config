@@ -96,6 +96,9 @@
       "matchDatasources": [
         "docker"
       ],
+      "matchDepTypes": [
+        "image"
+      ],
       "matchUpdateTypes": [
         "minor",
         "patch",
