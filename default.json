@@ -8,7 +8,6 @@
     ":semanticCommits",
     ":semanticCommitScope(deps)",
     "docker:enableMajor",
-    "docker:pinDigests",
     "group:linters",
     "helpers:pinGitHubActionDigests"
   ],
@@ -109,6 +108,18 @@
       ],
       "groupName": "all non-major docker images",
       "groupSlug": "all-non-major-docker-images"
+    },
+    {
+      "description": "Pin all Docker digests",
+      "matchDatasources": [
+        "docker"
+      ],
+      "matchDepTypes": [
+        "image"
+      ],
+      "pinDigests": true,
+      "groupName": "docker pin digests",
+      "groupSlug": "docker-pin-digests"
     },
     {
       "description": "Require dashboard approval for major updates",
