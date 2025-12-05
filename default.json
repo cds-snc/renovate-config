@@ -44,8 +44,7 @@
   ],
   "osvVulnerabilityAlerts": true,
   "vulnerabilityAlerts": {
-    "enabled": true,
-    "vulnerabilityFixStrategy": "lowest"
+    "enabled": true
   },
   "packageRules": [
     {
