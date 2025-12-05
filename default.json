@@ -42,6 +42,11 @@
     ".github/workflows/export_github_data.yml",
     ".github/workflows/backstage-catalog-helper.yml"
   ],
+  "osvVulnerabilityAlerts": true,
+  "vulnerabilityAlerts": {
+    "enabled": true,
+    "vulnerabilityFixStrategy": "lowest"
+  },
   "packageRules": [
     {
       "matchDatasources": [
