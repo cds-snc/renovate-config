@@ -22,9 +22,13 @@ jobs:
       - name: Checkout
         uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # v4.3.1
 
+      - name: Setup Node.js
+        uses: actions/setup-node@39370e3970a6d050c480ffad4ff0ed4d3fdee5af # v4.1.0
+        with:
+          node-version: 24
+
       - name: Validate ${{ matrix.config }} config
+        env:
+          LOG_LEVEL: debug
         run: |
-          docker run \
-            --entrypoint=renovate-config-validator \
-            --volume "$(pwd):/tmp" \
-            renovate/renovate:slim /tmp/${{ matrix.config }}
+          npx --yes --package "renovate@latest" -c "renovate-config-validator --strict ${{ matrix.config }}"
