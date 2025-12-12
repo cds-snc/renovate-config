@@ -2,7 +2,7 @@
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "description": "Default preset for use with CDS repos",
   "extends": [
-    "config:base",
+    "config:recommended",
     ":maintainLockFilesWeekly",
     ":rebaseStalePrs",
     ":semanticCommits",
@@ -32,8 +32,8 @@
     "tibdex/github-app-token"
   ],
   "pip_requirements": {
-    "fileMatch": [
-      "(^|/)([\\w-]*)requirements([\\w-]*)\\.(txt|pip|in)$"
+    "managerFilePatterns": [
+      "/(^|/)([\\w-]*)requirements([\\w-]*)\\.(txt|pip|in)$/"
     ]
   },
   "ignorePaths": [
@@ -58,25 +58,25 @@
     },
     {
       "description": "Group all patch updates",
-      "matchPackagePatterns": [
-        "*"
-      ],
       "matchUpdateTypes": [
         "patch"
       ],
       "groupName": "all patch dependencies",
-      "groupSlug": "all-patch"
+      "groupSlug": "all-patch",
+      "matchPackageNames": [
+        "*"
+      ]
     },
     {
       "description": "Group all minor updates",
-      "matchPackagePatterns": [
-        "*"
-      ],
       "matchUpdateTypes": [
         "minor"
       ],
       "groupName": "all minor dependencies",
-      "groupSlug": "all-minor"
+      "groupSlug": "all-minor",
+      "matchPackageNames": [
+        "*"
+      ]
     },
     {
       "description": "Group all non-major GitHub actions",
@@ -140,8 +140,7 @@
         "digest",
         "lockFileMaintenance"
       ],
-      "minimumReleaseAge": "7 days",
-      "minimumReleaseAgeBehaviour": "timestamp-required"
+      "minimumReleaseAge": "7 days"
     },
     {
       "description": "v prefix workaround for action updates",
@@ -154,21 +153,17 @@
     {
       "description": "Group prettier packages",
       "matchPackageNames": [
-        "prettier"
-      ],
-      "matchPackagePatterns": [
-        "^@prettier\\/",
-        "^prettier-plugin-"
+        "prettier",
+        "/^@prettier\\//",
+        "/^prettier-plugin-/"
       ],
       "groupName": "prettier packages"
     },
     {
       "description": "Require approval for aws-sdk as it updates too often",
       "matchPackageNames": [
-        "aws-sdk"
-      ],
-      "matchPackagePatterns": [
-        "^@aws-sdk\\/"
+        "aws-sdk",
+        "/^@aws-sdk\\//"
       ],
       "dependencyDashboardApproval": true
     }
