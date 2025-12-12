@@ -133,14 +133,15 @@
       "dependencyDashboardApproval": true
     },
     {
-      "description": "One week stability period for minor, patch, digest and lockFileMaintenance",
+      "description": "One week release age for minor, patch, digest and lockFileMaintenance",
       "matchUpdateTypes": [
         "minor",
         "patch",
         "digest",
         "lockFileMaintenance"
       ],
-      "stabilityDays": 7
+      "minimumReleaseAge": "7 days",
+      "minimumReleaseAgeBehaviour": "timestamp-required"
     },
     {
       "description": "v prefix workaround for action updates",
