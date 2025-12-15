@@ -135,10 +135,10 @@
     {
       "description": "One week release age for minor, patch, digest and lockFileMaintenance",
       "matchUpdateTypes": [
+        "major",
         "minor",
         "patch",
-        "digest",
-        "lockFileMaintenance"
+        "digest"
       ],
       "minimumReleaseAge": "7 days"
     },

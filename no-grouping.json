@@ -88,10 +88,10 @@
     {
       "description": "One week stability period for minor, patch, digest and lockFileMaintenance",
       "matchUpdateTypes": [
+        "major",
         "minor",
         "patch",
-        "digest",
-        "lockFileMaintenance"
+        "digest"
       ],
       "minimumReleaseAge": "7 days"
     },
