@@ -39,7 +39,6 @@
   "ignorePaths": [
     ".github/workflows/s3-backup.yml",
     ".github/workflows/ossf-scorecard.yml",
-    ".github/workflows/export_github_data.yml",
     ".github/workflows/backstage-catalog-helper.yml"
   ],
   "osvVulnerabilityAlerts": true,
